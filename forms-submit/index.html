@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1.0, initial-scale=1.0">
+    <title>Hello Form</title>
+    <script>
+        function submitClicked() {
+            console.log("submit clicked")
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+
+            console.log(name);
+            console.log(email);
+
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="return submitClicked()">
+        Name <input type="text" name="name" id="name">
+        Email <input type="email" name="email" id="email">
+        <input type="submit" value="GO!!">
+
+    </form>
+</body>
+</html>
